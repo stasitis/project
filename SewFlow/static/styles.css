@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('hotel-bg.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f04a4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.photos img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.features h2 {
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.hero-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .btn-small {
+    padding: 5px 10px;
+    background-color: #f04a4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.auth-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.auth-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04a4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #e03a3a;
+}
+
+.auth-form a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #f04a4a;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.booking-page {
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+.booking-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.booking-description {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.booking-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.booking-form input[type="date"] {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booking-form button.booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form button.booking-button:hover {
+    background-color: #4cae4c;
+}
+
+.confirmation-page {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.confirmation-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.confirmation-info {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.confirmation-total {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 30px;
+}
+
+.confirmation-form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.confirmation-button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirmation-button:hover {
+    background-color: #4cae4c;
+}
+
+.profile-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.profile-page h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-page h2 {
+    font-size: 28px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.profile-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.profile-page th,
+.profile-page td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.profile-page th {
+    background-color: #f04a4a;
+    color: white;
+}
+
+.profile-page td {
+    background-color: white;
+}
+
+.profile-page p {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}

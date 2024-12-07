@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SewFlow</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <header>
+        <div class="logo"><a href="/">SewFlow &#129525;</a></div>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="/rooms">Товары</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            {% if is_logged_in %}
+                <a href="/profile" class="btn-small">Личный кабинет &#128242;</a>
+                <a href="/logout" class="btn-small">Выход</a>
+            {% else %}
+                <a href="/register" class="btn-small">Регистрация &#128278;</a>
+                <a href="/login" class="btn-small">Вход &#127991;</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="/static/images/logo.jpg" alt="Логотип гостиницы">
+        </div>
+        <h1>Добро пожаловать в семью SewFlow </h1>
+        <p>Для нас важны комфорт, качество и индивидуальный подход,
+            чтобы каждая вещь приносила радость &#129526;</p>
+        <a href="/rooms" class="btn">Купить сейчас</a>
+    </section>
+    
+    <section class="gallery">
+        <h2>Наши товары</h2>
+        <h2>&#128317;</h2>
+        <div class="photos">
+            <img src="/static/images/hotel.jpg" alt="Фото 1">
+            <img src="/static/images/int1.jpg" alt="Фото 2">
+            <img src="/static/images/int2.jpg" alt="Фото 3">
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <h2>Наши услуги</h2>
+        <div class="feature">
+            <h3>Пошив одежды на заказ &#128084;</h3>
+            <p>Индивидуальный пошив одежды по вашим меркам и дизайну, от повседневных вещей до вечерних нарядов.</p>
+        </div>
+        <div class="feature">
+            <h3>Массовый пошив партий одежды &#129507;</h3>
+            <p>Производство серийных партий для брендов, магазинов и корпоративных клиентов.</p>
+        </div>
+        <div class="feature">
+            <h3>Пошив корпоративной униформы &#129404;</h3>
+            <p>Разработка и изготовление униформы для различных отраслей: от гостиничного бизнеса до медицинских учреждений.</p>
+        </div>
+    </section>
+
+    <footer id = "footer">
+        <p>Контакты: +7 (000) 123-45-67 | Email: info@gmail.com</p>
+        <p>&copy; 2024 SewFlow.</p>
+    </footer>
+</body>
+</html>

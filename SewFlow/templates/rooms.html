@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список товаров</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <header>
+        <div class="logo"><a href="/">SewFlow &#129525;</a></div>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/rooms">Товары</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="room-list">
+        <h1>Наши товары</h1>
+        <div class="rooms-container">
+            {% for room_info in rooms %}
+                <div class="room">
+                    <h2>{{ room_info.room.name }}</h2>
+                    <p>{{ room_info.room.description }}</p>
+                    <p>Цена: {{ room_info.room.price }} ₽</p>
+                    <img src="{{ url_for('static', filename=room_info.room.image) }}" alt="{{ room_info.room.name }}">
+                    
+                    {% if room_info.booked_dates %}
+                        <h3>Забронированные даты:</h3>
+                        <ul>
+                            {% for start_date, end_date in room_info.booked_dates %}
+                                <li>{{ start_date.strftime('%Y-%m-%d') }} - {{ end_date.strftime('%Y-%m-%d') }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>100 штук</p>
+                    {% endif %}
+
+                    <form action="{{ url_for('book_room', room_id=room_info.room.id) }}">
+                        <button type="submit">Заказать &#9989;</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <footer>
+        <p>Контакты: +7 (000) 123-45-67 | Email: info@gmail.com</p>
+        <p>&copy; 2024 SewFlow</p>
+    </footer>
+</body>
+</html>
